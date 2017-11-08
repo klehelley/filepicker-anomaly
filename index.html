@@ -9,10 +9,24 @@
 		<div class="container">
 			<h1>An anomaly</h1>
 			<p>Clicking the following button has no effect on some browsers, but works well with others :</p>
-			<ul>
-				<li>Firefox 56/Ubuntu 17.04 : opens the file picker (expected behaviour)</li>
-				<li>Chrome 53/Ubuntu 17.04 : no effect</li>
-			</ul>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<strong>Works as expected :</strong>
+					<ul>
+						<li>Firefox 56/Ubuntu 17.04 (detected as pop-up ?)</li>
+						<li>Firefox 56/Windows 7 (detected as pop-up ?)</li>
+						<li>Internet Explorer 11/Windows 7</li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<strong>Does not open a filepicker :</strong>
+					<ul>
+						<li>Chrome 53/Ubuntu 17.04</li>
+						<li>Chrome 61/Windows 7</li>
+					</ul>
+				</div>
+			</div>
 
 	    <div id="app"></div>
 		</div>

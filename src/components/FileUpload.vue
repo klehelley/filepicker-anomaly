@@ -37,7 +37,6 @@
       }
     },
     mounted: function(){
-      // alert('Should open file selector now');
       this.$refs.actualFileField.click();
     }
   }

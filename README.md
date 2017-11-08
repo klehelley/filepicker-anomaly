@@ -25,7 +25,11 @@ Click on the "Add a file" button to check if it works.
 
 ## Browsers tested so far
 
-* Firefox 56/Ubuntu 17.04 : clicking "Add a file" opens a filepicker
+* Firefox 56/Ubuntu 17.04 : clicking "Add a file" opens a filepicker (may be detected as a pop-up and blocked)
 * Chrome 53/Ubuntu 17.04 : the filepicker never appears
+* Internet Explorer 11/Windows 7 : clicking "Add a file" opens a filepicker
+* Firefox 56/Windows 7 : clicking "Add a file" opens a filepicker (may be detected as a pop-up and blocked)
+* Chrome 61/Windows 7 : the filepicker never appears
 
-Also, when I first hears about the issue, it was because one of our users reported the widget not working with Firefox, but being OK with Chrome (on Windows, however no precise version number was given to me).
+Is this actually a Chrome issue rather than a problem with my tool stack?
+
