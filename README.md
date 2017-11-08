@@ -14,9 +14,10 @@ This code is a heavily simplified version of the code I have to work with. It de
 
 ## How to check the anomaly
 
-Just clone the projet and run the following command to start testing with your favourite browsers:
+Just clone the projet and run the following commands to start testing with your favourite browsers:
 
 ``` bash
+npm install
 npm run dev
 ```
 
