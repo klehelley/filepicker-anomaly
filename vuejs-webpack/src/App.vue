@@ -1,5 +1,5 @@
 <template>
-	<Files inputFileName="myFiles" />
+	<files fieldName="myFiles" />
 </template>
 
 <script>

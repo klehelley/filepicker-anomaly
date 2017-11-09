@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>VueJS+Chrome problem demo (no Webpack)</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>VueJS+Chrome problem demo (no Webpack)</h1>
+			<p>Clicking the following button has no effect on some browsers, but works well with others :</p>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<strong>Works as expected :</strong>
+					<ul>
+						<li>Firefox 56/Ubuntu 17.04</li>
+						<li>Firefox 56/Windows 7</li>
+						<li>Internet Explorer 11/Windows 7</li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<strong>Does not open a filepicker :</strong>
+					<ul>
+						<li>Chrome 53/Ubuntu 17.04</li>
+						<li>Chrome 61/Windows 7</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="app"></div>
+		</div>
+
+		<script type="application/javascript" src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
+		<script type="text/x-template" id="my-file-upload-template">
+			<li class="list-group-item">
+				<i class="glyphicon glyphicon-file"></i>
+				{{fileName}}
+				<button type="button" class="btn btn-danger btn-xs pull-right" @click="removeFile">
+					<i class="glyphicon glyphicon-remove"></i> <span class="sr-only">Remove</span>
+				</button>
+				<input type="file" class="hidden" :name="fieldName" @change="selectFile" ref="actualFileField">
+			</li>
+		</script>
+		<script type="text/x-template" id="my-files-template">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<button type="button" class="btn btn-primary btn-block" @click="chooseFile">
+						<i class="glyphicon glyphicon-plus"></i> Add a file
+					</button>
+				</div>
+
+				<ul class="list-group">
+					<file-upload v-for="file of files" :fieldName="fieldName" :file="file" @removeFile="removeFile(file)"/>
+				</ul>
+			</div>
+		</script>
+		<script type="application/javascript" src="app.js"></script>
+		<script type="application/javascript">
+			var MyApp = initApp('app')
+		</script>
+	</body>
+</html>
