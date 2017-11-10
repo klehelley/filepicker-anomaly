@@ -43,3 +43,9 @@ Just click on the "Add a file" button to check if it works.
 
 Where is the actual issue to fix : in my code, in VueJS or in Chrome?
 
+## Additionnal information and acknowledgement
+
+A bug report was filed, using this project for reproduction purposes, in the VueJS GitHub project ([#7028](https://github.com/vuejs/vue/issues/7028)). I received a quick and thorough answer from [LinuxBorg](https://github.com/LinusBorg). Many thanks to him!
+
+And many thanks to the VueJS project in general, while I have yet to heavily use that tool, I really like working with it so far. :)
+
